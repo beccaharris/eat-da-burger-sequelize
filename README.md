@@ -1,6 +1,6 @@
 # Eat-Da-Burger
 This app allows users to list and keep track of burgers they want to eat and have already eaten. It was built using Sequelize.<br>
-Check it out on <a href="https://bharris-eat-da-burger-sequelize.herokuapp.com/">Heroku</a>
+Check it out on <a href="https://bharris-eat-da-burger-sequel.herokuapp.com/">Heroku</a>
 
 ## Getting Started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
