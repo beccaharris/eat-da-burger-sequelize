@@ -1,0 +1,63 @@
+body {
+  background-image: url('../img/fries.jpg');
+  color: white;
+  padding-bottom: 50px;
+  font-family: 'Arima Madurai', cursive;
+}
+h1 {
+  text-align: center;
+  font-family: 'Merienda One', cursive;
+  margin-top: 10px;
+}
+p {
+  margin-top: 0 !important;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.jumbotron {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-image: url('../img/darkness.png')
+}
+.burger-pic {
+  height: 200px;
+}
+textarea {
+  width: 50% !important;
+}
+.add-burger-button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+h4 {
+  text-decoration: underline
+}
+.eat-burger-form {
+  float: right;
+  margin-right: 30px;
+}
+.uneaten-burgers {
+  text-align: left;
+}
+.eaten-burgers {
+  color: #979797;
+  text-align: right;
+}
+.list-1 {
+  border-right: 1px solid gray
+}
+li {
+  margin-bottom: 5px;
+}
+ul {
+  list-style: none;
+  margin-bottom: 100px;
+}
+nav {
+  border-top: 1px solid white;
+  padding-left: 0;
+  padding-right: 0;
+}
+p {
+  margin-top: 30px;
+}

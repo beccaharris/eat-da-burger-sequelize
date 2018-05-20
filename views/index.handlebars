@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="jumbotron">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="d-flex justify-content-center">
+        <img class="burger-pic" src="/assets/img/burger.png" alt="Eat Da Burger Picture">
+      </div>
+      <h1 class="display-3">Eat-Da-Burger!</h1>
+      <p><em>(made with Sequelize)</em></p>
+    </div>
+
+      <!-- Form to add new burger --> 
+      <div class="col-md-12">
+        <div class="add-burger-form">
+          <form action="/burgers" method="POST" class="add-burger-form">
+            <div class="d-flex justify-content-center">
+              <textarea maxlength=50 class="form-control" id="type-of-burger" placeholder="Enter the type of burger you'd like to eat here!" name="burger_name"></textarea>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary add-burger-button">Add Burger</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <div class="row">
+      
+      <!-- List of burgers available to eat -->
+      <div class="col-md-6 list-1">
+        <h4>Burgers you want to eat...</h4>
+        <ul class="list-group uneaten-burgers">
+          {{#each burgers}} 
+            {{#unless this.devoured}}
+              <li>
+                {{id}}. {{burger_name}}    
+                <form action="/burgers/{{this.id}}?_method=PUT" method="POST" class="eat-burger-form">
+                  <button 
+                    class="btn btn-primary btn-sm" 
+                    data-id="{{id}}" 
+                    data-eat="{{devoured}}"
+                    data-toggle="tooltip" 
+                    data-placement="right" 
+                    title="Eat Me!!!!!!">
+                      <i class="fas fa-utensils"></i>
+                  </button>
+                </form>
+             </li>
+            {{/unless}} 
+          {{/each}}
+        </ul>
+      </div>
+
+
+
+      <!-- List of burgers that have been eaten --> 
+      <div class="col-md-6">
+        <h4 class="eaten-burgers">Burgers you've eaten...</h4>
+        <ul class="list-group eaten-burgers">
+          {{#each burgers}} 
+            {{#if this.devoured}}
+              <li>
+                {{id}}. {{burger_name}}
+              </li>
+            {{/if}} 
+          {{/each}}
+        </ul>
+      </div>
+
+    </div>
+    <hr>
+    <nav>
+      <div class="d-flex justify-content-center">
+        <p class="h4">&copy; 2018 Becca Harris</p>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a class="h3" target="_blank" href="https://github.com/beccaharris/eat-da-burger"><i class="fab fa-github fa-2x"></i></a>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<script>
+  // JS For tooltips //
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
