@@ -1,6 +1,6 @@
 # Eat-Da-Burger
-This app allows users to list and keep track of burgers they want to eat and have already eaten.<br>
-Check it out on <a href="https://bharris-eat-da-burger.herokuapp.com/">Heroku</a>
+This app allows users to list and keep track of burgers they want to eat and have already eaten. It was built using Sequelize.<br>
+Check it out on <a href="https://bharris-eat-da-burger-sequelize.herokuapp.com/">Heroku</a>
 
 ## Getting Started 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -17,13 +17,14 @@ npm install body-parser
 npm install mysql
 npm install method-override
 npm install express-handlebars
+npm install sequelize mysql2
 ```
 *Ensure the ```node_modules/ ``` folder is in your .gitignore file. If it's not, add it.*
 
 ## Running it
 * Open the app in your integrated terminal or cd into the app folder in your regular terminal
 * Run ```node server.js```
-* Navigate to localhost:8080
+* Navigate to localhost:3000
 * You can type in a new burger in the main text field and click submit - it should appear in the list of burgers you want to eat. You can click the little bue button with a knife and fork to "check off" the burger, saying that you have eaten it. It will move to the list on the right. 
 
 ## Built With
